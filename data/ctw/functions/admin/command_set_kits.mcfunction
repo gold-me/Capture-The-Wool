@@ -1,0 +1,10 @@
+execute unless score @s ctw_set_kits matches 2..5 run tellraw @s [{"text":" -------------------- ","color":"dark_gray"},{"text":"Set Kits:","color":"yellow"},{"text":" -------------------- \n ","color":"dark_gray"},{"text":"\n ----- ","color":"dark_gray"},{"text":"[Blue Team]","color":"blue","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Set the "},{"text":"Blue Team","color":"blue"},{"text":" kit to your current inventory"}]},"clickEvent":{"action":"run_command","value":"/trigger ctw_set_kits set 2"}},{"text":" ----- ","color":"dark_gray"},{"text":"[Reset Blue Team]","color":"blue","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Reset the "},{"text":"Blue Team","color":"blue"},{"text":" kit to defaults"}]},"clickEvent":{"action":"run_command","value":"/trigger ctw_set_kits set 3"}},{"text":" ----- ","color":"dark_gray"},{"text":"\n ----- ","color":"dark_gray"},{"text":"[Red Team]","color":"red","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Set the "},{"text":"Red Team","color":"red"},{"text":" kit to your current inventory"}]},"clickEvent":{"action":"run_command","value":"/trigger ctw_set_kits set 4"}},{"text":" ----- ","color":"dark_gray"},{"text":"[Reset Red Team]","color":"red","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Reset the "},{"text":"Red Team","color":"red"},{"text":" kit to defaults"}]},"clickEvent":{"action":"run_command","value":"/trigger ctw_set_kits set 5"}},{"text":" ----- ","color":"dark_gray"},{"text":"\n\n WARNING: ","color":"yellow","bold":true},{"text":"Items placed in the middle hotbar slot will be OVERRIDEN ","color":"red","bold":true}]
+
+execute if score @s ctw_set_kits matches 2 run function ctw:admin/set_kits/team_blue
+execute if score @s ctw_set_kits matches 3 run function ctw:admin/set_kits/default_team_blue
+execute if score @s ctw_set_kits matches 4 run function ctw:admin/set_kits/team_red
+execute if score @s ctw_set_kits matches 5 run function ctw:admin/set_kits/default_team_red
+
+## Reset triggers
+    scoreboard players reset @s ctw_set_kits
+    scoreboard players enable @s ctw_set_kits

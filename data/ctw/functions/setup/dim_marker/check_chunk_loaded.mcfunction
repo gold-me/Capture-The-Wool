@@ -1,0 +1,2 @@
+summon minecraft:area_effect_cloud ~ ~ ~ {Tags:[ctw_loaded]}
+execute if entity @e[type=minecraft:area_effect_cloud,tag=ctw_loaded,limit=1,distance=..0.01] run function ctw:setup/dim_marker/start_dim_mark

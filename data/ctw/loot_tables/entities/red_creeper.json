@@ -1,0 +1,25 @@
+{
+  "type": "entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "item",
+          "weight": 1,
+          "name": "minecraft:creeper_spawn_egg",
+          "functions": [
+            {
+              "function": "set_count",
+              "count": 1
+            },
+            {
+              "function": "set_nbt",
+              "tag": "{display:{Name:'{\"text\":\"Red Team Creeper\",\"color\":\"red\",\"bold\":true,\"italic\":false}',Lore:['{\"text\":\"\\\\\"KABOOM?\\\\\"\"}','{\"text\":\"\\\\\"Yes Rico, Kaboom.\\\\\"\"}']},Enchantments:[{}],EntityTag:{CustomNameVisible:1b,Team:\"ctw_red_team\",DeathLootTable:\"ctw:entities/blue_creeper\"}}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+execute in minecraft:overworld run loot replace entity @s inventory.0 27 mine 2834 -64 -5000000 minecraft:air{drop_contents:1b}

@@ -1,0 +1,2 @@
+execute as @a[team=ctw_red_team,tag=!ctw_hasWool] if score @s ctw_wool_break_B matches 1.. run function ctw:game_updates/wool_stolen_blue
+execute as @a[team=ctw_blue_team] if score @s ctw_wool_break_B matches 1.. run function ctw:game_updates/wool_fix_team_blue
