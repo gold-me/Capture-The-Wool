@@ -1,0 +1,1 @@
+execute as @a[tag=ctw_inGame] run function ctw:main/leave
